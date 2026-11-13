@@ -1,0 +1,17 @@
+@"
+# Secrets - never push
+.env
+.streamlit/secrets.toml
+
+# Python junk
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.ipynb_checkpoints/
+"@ | Out-File -Encoding utf8 .gitignore
