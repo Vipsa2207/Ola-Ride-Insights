@@ -1,0 +1,22 @@
+{
+  "name": "OLA Dark",
+  "dataColors": ["#B5D334", "#2E8B57", "#F3A712", "#E4572E", "#7F7F7F", "#4C9F70", "#8FB4FF", "#C9C9C9"],
+  "background": "#1C1C1C",
+  "foreground": "#F2F2F2",
+  "tableAccent": "#B5D334",
+  "textClasses": {
+    "callout": { "color": "#B5D334", "fontFace": "Segoe UI Semibold" },
+    "title":   { "color": "#F2F2F2", "fontFace": "Segoe UI Semibold", "fontSize": 12 },
+    "header":  { "color": "#F2F2F2", "fontFace": "Segoe UI Semibold" },
+    "label":   { "color": "#D9D9D9", "fontFace": "Segoe UI" }
+  },
+  "visualStyles": {
+    "*": { "*": {
+      "background": [{ "color": { "solid": { "color": "#1C1C1C" } }, "transparency": 0 }],
+      "border":     [{ "show": true, "color": { "solid": { "color": "#333333" } }, "radius": 8 }]
+    }},
+    "page": { "*": {
+      "background": [{ "color": { "solid": { "color": "#0D0D0D" } }, "transparency": 0 }]
+    }}
+  }
+}
