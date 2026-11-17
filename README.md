@@ -64,16 +64,15 @@ The same KPIs give **identical numbers** in the notebook, MySQL, Power BI, TiDB 
 
 ```mermaid
 flowchart LR
-    A[OLA_DataSet.xlsx<br/>sheet: July] --> B[Google Colab<br/>clean + 15 features + 19 EDA charts]
-    B --> C[ola_cleaned.csv]
-    C --> D[pipeline/load_to_mysql.py<br/>pandas + SQLAlchemy + PyMySQL]
-    D --> E[(MySQL ola_db<br/>local)]
-    D --> F[(TiDB Cloud<br/>MySQL-compatible)]
-    E -- ODBC DSN --> G[Power BI<br/>5 pages]
-    E -- SQLAlchemy --> H[Streamlit<br/>local]
-    F -- SQLAlchemy + SSL --> I[Streamlit Cloud<br/>live app]
+    A["OLA_DataSet.xlsx (sheet July)"] --> B["Google Colab: clean, 15 features, 19 EDA charts"]
+    B --> C["ola_cleaned.csv"]
+    C --> D["load_to_mysql.py (pandas + SQLAlchemy + PyMySQL)"]
+    D --> E[("MySQL ola_db - local")]
+    D --> F[("TiDB Cloud - MySQL compatible")]
+    E -->|"ODBC DSN"| G["Power BI - 5 pages"]
+    E -->|"SQLAlchemy"| H["Streamlit - local"]
+    F -->|"SQLAlchemy + SSL"| I["Streamlit Cloud - live app"]
 ```
-
 - **Power BI** reads MySQL through a 64-bit **ODBC DSN**, never the Excel or CSV file.
 - **Streamlit** reads MySQL / TiDB through **SQLAlchemy**, never the CSV.
 - Passwords live in `.env` and `.streamlit/secrets.toml`, which are both git-ignored.
