@@ -181,5 +181,5 @@ Expected verification output: `total_rows 103,024 · successful 63,967 · revenu
 
 ## 10. Author
 
-**Vipsa Patel**, B.Tech CSE (Data Science), ITM Vocational University, Vadodara
+**Vipsa Patel**
 [LinkedIn](https://www.linkedin.com/in/vipsapatel) · [GitHub](https://github.com/Vipsa2207)﻿# OLA Ride Insights
